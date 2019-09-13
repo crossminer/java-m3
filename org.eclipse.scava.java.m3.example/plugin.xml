@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?eclipse version="3.4"?>
+<plugin>
+
+   <extension
+         point="org.eclipse.ui.popupMenus">
+      <objectContribution
+            objectClass="org.eclipse.core.resources.IProject"
+            id="org.eclipse.scava.java.m3.example.contribution1">
+         <menu
+               label="M3"
+               path="additions"
+               id="org.eclipse.scava.java.m3.example.menu1">
+            <separator
+                  name="group1">
+            </separator>
+         </menu>
+         <action
+               label="Generate M3"
+               class="org.eclipse.scava.java.m3.example.popup.actions.GenerateM3Action"
+               menubarPath="org.eclipse.scava.java.m3.example.menu1/group1"
+               enablesFor="1"
+               id="org.eclipse.scava.java.m3.example.newAction">
+         </action>
+      </objectContribution>
+   </extension>
+
+</plugin>
